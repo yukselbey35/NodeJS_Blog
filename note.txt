@@ -1,1 +1,5 @@
 //Start to use nodejs npmjs to install express framework =npm install express
+//After the change scripts run = npm run boot or nodemon app
+  "scripts": {
+    "boot": "nodemon app.js" 
+  },
