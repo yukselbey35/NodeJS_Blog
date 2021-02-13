@@ -1,48 +1,3 @@
-const path=require('path')
-const express = require('express')
-const app = express()
-const port = 3000
-const hostname='127.0.0.1'
-
-// use the following code to serve images, CSS files, and JavaScript files in a directory named public:
-app.use(express.static('public'))
-
-app.get('/', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'index.html'))
-})
-app.get('/contact', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'contact.html'))
-})
-app.get('/about', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'about.html'))
-})
-
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
-  })
-  
-
-/* Examples
-app.use('/test', (req, res, next)=>{
-    console.log('This is a middleware')
-    next()
-})
-app.get('/test', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'contact.html'))
-})
-
-app.get('/users/:userID/movies/:moviesID', (req, res)=>{
-    res.send (
-        `<h1>User Name: ${req.params.userID}</h1>
-         <h1>Movie Name: ${req.params.moviesID}</h1>
-        `
-    )
-})
- */
-
-
-
-/* 
 const http = require('http') //requiring http protocol
 const fs = require('fs') //require and initialize fs module to access physical file system
 
@@ -79,4 +34,3 @@ const server = http.createServer((req, res) =>{  //we will run create server met
 server.listen(port, hostname, ()=>{
     console.log(`Server is running, http://${hostname}:${port}/`)
 })
- */
