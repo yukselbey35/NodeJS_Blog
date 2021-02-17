@@ -16,16 +16,17 @@ app.set('view engine', 'handlebars')
 
 
 app.get('/', (req, res)=>{
-    res.render('website2/index')
+    res.render('website/index')
 })
 
 app.get('/about.html', (req, res)=>{
-    res.sendFile(path.resolve(__dirname, 'website/about.html'))
+    res.render('website/about')
 })
 
 app.get('/blog.html', (req, res)=>{
-    res.sendFile(path.resolve(__dirname, 'website/blog.html'))
+    res.render('website/blog')
 })
+
 
 app.get('/contact.html', (req, res)=>{
     res.sendFile(path.resolve(__dirname, 'website/contact.html'))
