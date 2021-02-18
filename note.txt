@@ -20,3 +20,39 @@ app.use(express.static('public'))
 =npm install express-handlebars
  //We created views folder from https://www.npmjs.com/package/express-handlebars with same structure. 
  views/layouts/main.handlebars *we are using index.handlebars instead of main.handlebars
+
+//Created partials folder and in the partials we made website-footer.handlebars, 
+//website-header.handlebars, website-nav.handlebars, 
+
+//created index.handlebars, about.handlebars, blog.handlebars, contact.handlebars, in the website folder
+
+/* Type "/" instead of index.html in website-nav-handlebars*/
+
+Adding routing for every handlebars
+//Creates a super simple Express app which shows the basic way to register 
+//a Handlebars view engine using this package.
+app.engine('handlebars', exphbs())
+app.set('view engine', 'handlebars')
+
+
+app.get('/', (req, res)=>{
+    res.render('website/index')
+})
+
+app.get('/about.html', (req, res)=>{
+    res.render('website/about')
+})
+
+app.get('/blog.html', (req, res)=>{
+    res.render('website/blog')
+})
+
+
+app.get('/contact.html', (req, res)=>{
+    res.render('website/contact')
+})
+
+
+app.get('/login.html', (req, res)=>{
+    res.render('website/login')
+})

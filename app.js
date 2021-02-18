@@ -29,7 +29,16 @@ app.get('/blog.html', (req, res)=>{
 
 
 app.get('/contact.html', (req, res)=>{
-    res.sendFile(path.resolve(__dirname, 'website/contact.html'))
+    res.render('website/contact')
+})
+
+
+app.get('/login.html', (req, res)=>{
+    res.render('website/login')
+})
+
+app.get('/register', (req, res)=>{ /*you can type register instead of register.html on the address bar */
+    res.render('website/register')
 })
 
 app.get('/blog-single', (req, res)=>{ //On purpose typed "blog-single"
