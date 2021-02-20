@@ -1,3 +1,4 @@
+//to install database = npm install mongoose
 const path=require('path')
 const express = require('express')
 const exphbs  = require('express-handlebars')
@@ -5,6 +6,15 @@ const exphbs  = require('express-handlebars')
 const app = express()
 const port = 3000
 const hostname='127.0.0.1'
+
+// Using Node.js `require()`
+const mongoose = require('mongoose')
+
+
+mongoose.connect('mongodb://127.0.0.1/nodejs_blog_db', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
 
 // use the following code to serve images, CSS files, and JavaScript files in a directory named public:
 app.use(express.static('public')) //How to find our css, fonts, img static files that is app.use(express.static('public'))

@@ -34,6 +34,8 @@ Adding routing for every handlebars
 app.engine('handlebars', exphbs())
 app.set('view engine', 'handlebars')
 
+//to install database = npm install mongoose
+
 
 app.get('/', (req, res)=>{
     res.render('website/index')
