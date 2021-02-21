@@ -8,11 +8,19 @@ mongoose.connect('mongodb://127.0.0.1/nodejs_blog_test_db', {
   useUnifiedTopology: true
 })
 
+Post.findOneAndDelete('60326cd62a2bfe59d8882658', (error, post) =>{
+  console.log(error, post)
+})
+
+/* 
+//update by id
 Post.findByIdAndUpdate('603166b9f9d0f904483e82af', {
   title: 'my 1st title'
 }, (error, post) =>{
   console.log(error, post)
 })
+ */
+
 
 /* 
 //to find by id 
