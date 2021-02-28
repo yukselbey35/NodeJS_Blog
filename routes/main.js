@@ -28,4 +28,12 @@ router.get('/register', (req, res)=>{ /*you can type register instead of registe
     res.render('website/register')
 })
 
+router.get('/post/new', (req, res)=>{ /*you can type register instead of register.html on the address bar */
+    res.render('website/addpost')
+})
+
+router.post('/posts/test', (req, res)=>{ 
+    res.redirect('/')
+})
+
 module.exports = router
